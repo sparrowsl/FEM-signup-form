@@ -1,9 +1,26 @@
-body{
-  background-color: hsl(0, 100%, 74%);
-}
+body{ background-color: hsl(0, 100%, 74%); }
 header > *{
   color: white;
 }
-.terms a{
-  color: hsl(0, 100%, 74%);
+.form, .trial-alert{
+  box-shadow: 2px 6px 1px hsla(249, 10%, 26%, 0.363);
 }
+.trial-alert{
+  background-color: hsl(248, 32%, 49%);
+  color: white;
+}
+.form{ background-color: #fff; }
+.uk-input{
+  padding: 1.5em 1em;
+  font-weight: bold;
+}
+.claim-button button{
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  width: 100%;
+  padding: .5em;
+  box-shadow: 2px 4px 2px hsla(154, 80%, 29%, 0.795);
+}
+.terms a{ color: hsl(0, 100%, 74%); }
+.terms p{ color: silver; }
+.terms-link{ color: hsl(0, 100%, 74%); }
