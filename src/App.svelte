@@ -1,5 +1,4 @@
 <script>
-  import "../public/build/bundle.css";
   import Form from "./Form.svelte";
   import Hero from "./Hero.svelte";
 </script>
