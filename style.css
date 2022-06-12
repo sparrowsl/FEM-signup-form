@@ -25,6 +25,8 @@ header > *{ color: white; }
 
 @media screen and (min-width: 768px) {
   main{
+    max-width: 960px;
+    margin-inline: auto;
     display: flex;
     padding: 10vh;
   }
