@@ -2,12 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-  :root {
-    --fem_red: hsl(0, 100%, 74%),
-    --fem_green: hsl(154, 59%, 51%),
-    --fem_blue: hsl(248, 32%, 49%),
-    --fem_dark_blue: hsl(249, 10%, 26%),
-    --fem_grayish_blue: hsl(246, 25%, 77%),
-  }
-*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
