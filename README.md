@@ -1,27 +1,86 @@
-# This repo is no longer maintained. Consider using `npm init vite` and selecting the `svelte` option or — if you want a full-fledged app framework and don't mind using pre-1.0 software — use [SvelteKit](https://kit.svelte.dev), the official application framework for Svelte.
+# Frontend Mentor - Intro component with sign up form solution
 
----
+This is a solution to the [Intro component with sign up form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1).
 
-# svelte app
+## Table of contents
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+- [Get Started](#get-started)
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+## Overview
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Receive an error message when the `form` is submitted if:
+  - Any `input` field is empty. The message for this error should say _"[Field Name] cannot be empty"_
+  - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say _"Looks like this is not an email"_
+
+### Screenshot
+
+![](./design/desktop-design.jpg)
+
+### Links
+
+- Solution URL: [solution URL here](https://github.com/benjithorpe/FEM-signup-form)
+- Live Site URL: [live site URL here](https://fe-signupform.netlify.app/)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- Mobile-first workflow
+- [TailwindCSS](https://tailwindcss.com/) - CSS Framework
+- [Svelte](https://svelte.dev/) - JS framework
+
+### What I learned
+
+- Using dynamic class rules inside svelte
+
+```html
+<!-- # ... -->
+<input ... ... class="{variable ? 'class1 class1' : 'false-class'} extra-css" />
+<!-- # ... -->
 ```
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+- Using tailwindcss and prettier
 
+## Author
+
+<!-- - Website - [benjithorpe](https://www.your-site.com) -->
+
+- Frontend Mentor - [@benjithorpe](https://www.frontendmentor.io/profile/benjithorpe)
+- Twitter - [@benjithorpe](https://www.twitter.com/benjithorpe1)
+
+## Acknowledgments
+
+Thanks to the Svelte team and discord for answering all questions.
 
 ## Get started
+
+```bash
+git clone https://github.com/benjithorpe/FEM-signup-form
+
+cd FEM-signup-form
+```
+
+_Note that you will need to have [Node.js](https://nodejs.org) installed._
 
 Install the dependencies...
 
 ```bash
-cd svelte-app
 npm install
 ```
 
@@ -31,77 +90,10 @@ npm install
 npm run dev
 ```
 
+or run the script below to compile and minify the tailwind css automatically
+
+```bash
+npx tailwindcss -i ./public/tailwind.css -o ./public/bundle.css --watch --minify
+```
+
 Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
-
-If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
-
-## Building and running in production mode
-
-To create an optimised version of the app:
-
-```bash
-npm run build
-```
-
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
-
-
-## Single-page app mode
-
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
-
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
-
-```js
-"start": "sirv public --single"
-```
-
-## Using TypeScript
-
-This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
-
-```bash
-node scripts/setupTypeScript.js
-```
-
-Or remove the script via:
-
-```bash
-rm scripts/setupTypeScript.js
-```
-
-If you want to use `baseUrl` or `path` aliases within your `tsconfig`, you need to set up `@rollup/plugin-alias` to tell Rollup to resolve the aliases. For more info, see [this StackOverflow question](https://stackoverflow.com/questions/63427935/setup-tsconfig-path-in-svelte).
-
-## Deploying to the web
-
-### With [Vercel](https://vercel.com)
-
-Install `vercel` if you haven't already:
-
-```bash
-npm install -g vercel
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-vercel deploy --name my-project
-```
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
-```
